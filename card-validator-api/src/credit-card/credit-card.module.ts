@@ -1,0 +1,10 @@
+import { Module } from '@nestjs/common';
+import { CreditCardController } from './credit-card.controller';
+import { CreditCardService } from './credit-card.service';
+
+@Module({
+  controllers: [CreditCardController],
+  providers: [CreditCardService],
+  exports: [CreditCardService],
+})
+export class CreditCardModule {}
